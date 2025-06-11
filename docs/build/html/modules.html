@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Moduły &#8212; Librus 1.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="_static/basic.css?v=b08954a9" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=27fed22d" />
+    <script src="_static/documentation_options.js?v=f2a433a1"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Librus documentation" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="moduly">
+<h1>Moduły<a class="headerlink" href="#moduly" title="Link to this heading">¶</a></h1>
+<section id="module-auth">
+<span id="auth-logowanie-i-rejestracja"></span><h2>auth (Logowanie i rejestracja)<a class="headerlink" href="#module-auth" title="Link to this heading">¶</a></h2>
+<p>Proste logowanie i rejestracja użytkowników (z hasłem szyfrowanym przez <cite>utils</cite>).</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="auth.login">
+<span class="sig-prename descclassname"><span class="pre">auth.</span></span><span class="sig-name descname"><span class="pre">login</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">username</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#auth.login" title="Link to this definition">¶</a></dt>
+<dd><p>Weryfikuje login i hasło; zwraca (True, user_id) lub (False, komunikat).</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="auth.register">
+<span class="sig-prename descclassname"><span class="pre">auth.</span></span><span class="sig-name descname"><span class="pre">register</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">username</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#auth.register" title="Link to this definition">¶</a></dt>
+<dd><p>Rejestruje nowego użytkownika lub zgłasza, że istnieje.</p>
+</dd></dl>
+
+</section>
+<section id="module-db">
+<span id="db-modele-bazy-danych"></span><h2>db (Modele bazy danych)<a class="headerlink" href="#module-db" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="db.Grade">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">db.</span></span><span class="sig-name descname"><span class="pre">Grade</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#db.Grade" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Base</span></code></p>
+<p>Pojedyncza ocena (przedmiot, wartość).</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="db.Grade.id">
+<span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#db.Grade.id" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="db.Grade.score">
+<span class="sig-name descname"><span class="pre">score</span></span><a class="headerlink" href="#db.Grade.score" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="db.Grade.subject">
+<span class="sig-name descname"><span class="pre">subject</span></span><a class="headerlink" href="#db.Grade.subject" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="db.Grade.user">
+<span class="sig-name descname"><span class="pre">user</span></span><a class="headerlink" href="#db.Grade.user" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="db.Grade.user_id">
+<span class="sig-name descname"><span class="pre">user_id</span></span><a class="headerlink" href="#db.Grade.user_id" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="db.ScheduleEntry">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">db.</span></span><span class="sig-name descname"><span class="pre">ScheduleEntry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#db.ScheduleEntry" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Base</span></code></p>
+<p>Pojedynczy wpis w planie lekcji (dzień, godzina, przedmiot).</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="db.ScheduleEntry.day">
+<span class="sig-name descname"><span class="pre">day</span></span><a class="headerlink" href="#db.ScheduleEntry.day" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="db.ScheduleEntry.id">
+<span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#db.ScheduleEntry.id" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="db.ScheduleEntry.subject">
+<span class="sig-name descname"><span class="pre">subject</span></span><a class="headerlink" href="#db.ScheduleEntry.subject" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="db.ScheduleEntry.time">
+<span class="sig-name descname"><span class="pre">time</span></span><a class="headerlink" href="#db.ScheduleEntry.time" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="db.ScheduleEntry.user">
+<span class="sig-name descname"><span class="pre">user</span></span><a class="headerlink" href="#db.ScheduleEntry.user" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="db.ScheduleEntry.user_id">
+<span class="sig-name descname"><span class="pre">user_id</span></span><a class="headerlink" href="#db.ScheduleEntry.user_id" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="db.User">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">db.</span></span><span class="sig-name descname"><span class="pre">User</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#db.User" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Base</span></code></p>
+<p>Tabela użytkowników: login i zaszyfrowane hasło.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="db.User.grades">
+<span class="sig-name descname"><span class="pre">grades</span></span><a class="headerlink" href="#db.User.grades" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="db.User.id">
+<span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#db.User.id" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="db.User.password">
+<span class="sig-name descname"><span class="pre">password</span></span><a class="headerlink" href="#db.User.password" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="db.User.schedules">
+<span class="sig-name descname"><span class="pre">schedules</span></span><a class="headerlink" href="#db.User.schedules" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="db.User.username">
+<span class="sig-name descname"><span class="pre">username</span></span><a class="headerlink" href="#db.User.username" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-utils">
+<span id="utils-szyfrowanie-hasel"></span><h2>utils (Szyfrowanie haseł)<a class="headerlink" href="#module-utils" title="Link to this heading">¶</a></h2>
+<p>Proste szyfrowanie i odszyfrowywanie haseł przy użyciu <cite>cryptography.Fernet</cite>.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="utils.decrypt">
+<span class="sig-prename descclassname"><span class="pre">utils.</span></span><span class="sig-name descname"><span class="pre">decrypt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.decrypt" title="Link to this definition">¶</a></dt>
+<dd><p>Odszyfrowuje zaszyfrowany token do tekstu jawnego.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="utils.encrypt">
+<span class="sig-prename descclassname"><span class="pre">utils.</span></span><span class="sig-name descname"><span class="pre">encrypt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#utils.encrypt" title="Link to this definition">¶</a></dt>
+<dd><p>Zwraca zaszyfrowany tekst (base64).</p>
+</dd></dl>
+
+</section>
+<section id="module-schedule_module">
+<span id="schedule-module-plan-lekcji"></span><h2>schedule_module (Plan lekcji)<a class="headerlink" href="#module-schedule_module" title="Link to this heading">¶</a></h2>
+<p>Moduł planu lekcji: dodawanie wpisów, czyszczenie, eksport CSV/PDF.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="schedule_module.add_entry">
+<span class="sig-prename descclassname"><span class="pre">schedule_module.</span></span><span class="sig-name descname"><span class="pre">add_entry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">day</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subject</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#schedule_module.add_entry" title="Link to this definition">¶</a></dt>
+<dd><p>Dodaje wpis (dzień, godzina, przedmiot) do planu lekcji.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="schedule_module.clear_schedule">
+<span class="sig-prename descclassname"><span class="pre">schedule_module.</span></span><span class="sig-name descname"><span class="pre">clear_schedule</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#schedule_module.clear_schedule" title="Link to this definition">¶</a></dt>
+<dd><p>Usuwa wszystkie wpisy planu lekcji danego użytkownika.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="schedule_module.export_schedule_csv">
+<span class="sig-prename descclassname"><span class="pre">schedule_module.</span></span><span class="sig-name descname"><span class="pre">export_schedule_csv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#schedule_module.export_schedule_csv" title="Link to this definition">¶</a></dt>
+<dd><p>Eksportuje plan lekcji do pliku CSV.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="schedule_module.export_schedule_pdf">
+<span class="sig-prename descclassname"><span class="pre">schedule_module.</span></span><span class="sig-name descname"><span class="pre">export_schedule_pdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#schedule_module.export_schedule_pdf" title="Link to this definition">¶</a></dt>
+<dd><p>Eksportuje plan lekcji do pliku PDF.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="schedule_module.get_schedule">
+<span class="sig-prename descclassname"><span class="pre">schedule_module.</span></span><span class="sig-name descname"><span class="pre">get_schedule</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#schedule_module.get_schedule" title="Link to this definition">¶</a></dt>
+<dd><p>Zwraca listę wpisów z planu lekcji dla danego użytkownika.</p>
+</dd></dl>
+
+</section>
+<section id="module-gradebook_module">
+<span id="gradebook-module-dziennik-ocen"></span><h2>gradebook_module (Dziennik ocen)<a class="headerlink" href="#module-gradebook_module" title="Link to this heading">¶</a></h2>
+<p>Moduł dziennika ocen: dodawanie, czyszczenie, eksport CSV/PDF.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="gradebook_module.add_grade">
+<span class="sig-prename descclassname"><span class="pre">gradebook_module.</span></span><span class="sig-name descname"><span class="pre">add_grade</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subject</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">score</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gradebook_module.add_grade" title="Link to this definition">¶</a></dt>
+<dd><p>Dodaje ocenę (przedmiot, wartość) do bazy.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="gradebook_module.clear_grades">
+<span class="sig-prename descclassname"><span class="pre">gradebook_module.</span></span><span class="sig-name descname"><span class="pre">clear_grades</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gradebook_module.clear_grades" title="Link to this definition">¶</a></dt>
+<dd><p>Usuwa wszystkie oceny danego użytkownika.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="gradebook_module.export_grades_csv">
+<span class="sig-prename descclassname"><span class="pre">gradebook_module.</span></span><span class="sig-name descname"><span class="pre">export_grades_csv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gradebook_module.export_grades_csv" title="Link to this definition">¶</a></dt>
+<dd><p>Eksportuje oceny do pliku CSV.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="gradebook_module.export_grades_pdf">
+<span class="sig-prename descclassname"><span class="pre">gradebook_module.</span></span><span class="sig-name descname"><span class="pre">export_grades_pdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gradebook_module.export_grades_pdf" title="Link to this definition">¶</a></dt>
+<dd><p>Eksportuje oceny do pliku PDF.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="gradebook_module.get_grades">
+<span class="sig-prename descclassname"><span class="pre">gradebook_module.</span></span><span class="sig-name descname"><span class="pre">get_grades</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gradebook_module.get_grades" title="Link to this definition">¶</a></dt>
+<dd><p>Zwraca listę ocen dla wybranego użytkownika.</p>
+</dd></dl>
+
+</section>
+<section id="module-stats_module">
+<span id="stats-module-statystyki-ocen"></span><h2>stats_module (Statystyki ocen)<a class="headerlink" href="#module-stats_module" title="Link to this heading">¶</a></h2>
+<p>Moduł obliczania statystyk: średnia, mediana, min, max oraz eksport PDF.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="stats_module.calculate_stats">
+<span class="sig-prename descclassname"><span class="pre">stats_module.</span></span><span class="sig-name descname"><span class="pre">calculate_stats</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stats_module.calculate_stats" title="Link to this definition">¶</a></dt>
+<dd><p>Oblicza średnią, medianę, min i max z ocen użytkownika.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="stats_module.export_stats_pdf">
+<span class="sig-prename descclassname"><span class="pre">stats_module.</span></span><span class="sig-name descname"><span class="pre">export_stats_pdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stats_module.export_stats_pdf" title="Link to this definition">¶</a></dt>
+<dd><p>Eksportuje obliczone statystyki do pliku PDF.</p>
+</dd></dl>
+
+</section>
+<section id="module-gui">
+<span id="gui-interfejs-uzytkownika"></span><h2>gui (Interfejs użytkownika)<a class="headerlink" href="#module-gui" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="gui.App">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">gui.</span></span><span class="sig-name descname"><span class="pre">App</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gui.App" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">CTk</span></code></p>
+<p>Główne okno aplikacji: trzy zakładki – Plan Lekcji, Dziennik Ocen, Statystyki.</p>
+</dd></dl>
+
+</section>
+<section id="module-main">
+<span id="main-glowne-okno-aplikacji"></span><h2>main (Główne okno aplikacji)<a class="headerlink" href="#module-main" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="main.MainMenu">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">main.</span></span><span class="sig-name descname"><span class="pre">MainMenu</span></span><a class="headerlink" href="#main.MainMenu" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">CTk</span></code></p>
+<p>Główne okno z przyciskami Logowanie i Rejestracja.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="main.center">
+<span class="sig-prename descclassname"><span class="pre">main.</span></span><span class="sig-name descname"><span class="pre">center</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">win</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">height</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#main.center" title="Link to this definition">¶</a></dt>
+<dd><p>Wyśrodkowuje okno <cite>win</cite> na ekranie o zadanych wymiarach.</p>
+</dd></dl>
+
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Librus</a></h1>
+
+
+
+
+
+
+
+
+
+<search id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Moduły</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-auth">auth (Logowanie i rejestracja)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-db">db (Modele bazy danych)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-utils">utils (Szyfrowanie haseł)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-schedule_module">schedule_module (Plan lekcji)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-gradebook_module">gradebook_module (Dziennik ocen)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-stats_module">stats_module (Statystyki ocen)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-gui">gui (Interfejs użytkownika)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-main">main (Główne okno aplikacji)</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">Librus documentation</a></li>
+  </ul></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2025, KrystianR.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.2.3</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="_sources/modules.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
